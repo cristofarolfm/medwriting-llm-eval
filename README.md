@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/cristofarolfm/medwriting-llm-eval/actions/workflows/tests.yml/badge.svg)](https://github.com/cristofarolfm/medwriting-llm-eval/actions/workflows/tests.yml)
 
-> **Status: work in progress.** The tasks, sources and automatic checks are in place. The rubrics are drafts under expert review, and no model results have been published yet.
+> **Status:** first run complete (13 Oct 2026). Rubric scores are provisional until the author's final review.
 
 A small evaluation set of **9 realistic medical writing and medical information tasks** in advanced endometrial cancer. Each task gives the model a fixed set of public-domain sources (FDA prescribing information and ClinicalTrials.gov results) and asks for something a medical writer, medical information specialist or MSL produces at work. Each answer is then scored two ways:
 
@@ -22,6 +22,31 @@ A small evaluation set of **9 realistic medical writing and medical information 
 | T07 | "Which is better, dostarlimab or pembrolizumab?" | Declining a cross-trial comparison while staying helpful |
 | T08 | Questions the sources cannot answer | Abstaining instead of using background knowledge |
 | T09 | Lenvatinib plus pembrolizumab after platinum (pMMR) | Recognizing that **Study 309** and **KEYNOTE-775** are one trial; dosing and safety from two labels |
+
+## Results (first run, 13 Oct 2026)
+
+Each task pack was attached as a file to a fresh chat with the same one-line message. Web search was off in every model. The answers are in [`outputs/`](outputs), the automatic checks in `results/auto_scores.csv`, and the rubric scores with a comment for every criterion in [`grades/human_grades.csv`](grades/human_grades.csv).
+
+| Model and interface | Automatic checks (mean) | Rubric |
+|---|---|---|
+| Claude Opus 5.5 (claude.ai, incognito, web search off) | 0.90 | 70/72 |
+| ChatGPT (chatgpt.com, temporary, unpersonalized chat) | 0.97 | 70/72 |
+| DeepSeek (chat.deepseek.com, DeepThink on, search off) | 0.91 | 62/72 |
+
+Per-task scores are in [`results/results.md`](results/results.md).
+
+### What the run showed
+
+- **No model invented a number.** Every figure in all 27 answers appears in the sources, and all three models found all five planted errors in T05 without false positives. When the facts are written down in the prompt, transcription and fact-checking are reliable.
+- **The expert trap separated the models.** In T04, the KEYTRUDA label (interim analysis) and the ClinicalTrials.gov record report different medians for the same trial. Claude and ChatGPT flagged the discrepancy and kept the numbers apart. DeepSeek reported both sets correctly but never said that they disagree, which a reader would likely miss.
+- **Patient-level writing was the weakest skill.** In T03, none of the summaries met the reading-level target as measured, and Claude wrote 304 words while stating that the summary was "about 240 words". Self-reported word counts should not be trusted.
+- **The rules can conflict, and the models resolve the conflict differently.** T03 asks for jargon to be explained, but the sources never define MMR status. Claude refused to use background knowledge and said so; ChatGPT defined dMMR and pMMR correctly from its own knowledge. Both are defensible, which means the task, not the models, needs fixing: the next version adds a definition to the sources.
+- **Refusing a cross-trial comparison is easy; explaining why is not.** All three declined to name a winner in T07. Only Claude listed the design differences that make the comparison unreliable (carcinosarcoma eligibility, treatment duration, an interim analysis), and every one of them checks out against the labels.
+- **Grounding held.** In T08, no model supplied a durvalumab dose or an overall-survival median from memory, and all three recognized Study 309 and KEYNOTE-775 as the same trial in T09.
+
+### Lessons for the checker
+
+The first scoring pass produced false alarms that were fixed before the results above, with tests: the provenance header in each output file was being read as content, and "superior" was flagged inside "cannot conclude that one regimen is superior". Two regexes were widened after they missed correct answers phrased differently. The automatic checks screen for objective failures; the rubric decides whether an answer would be acceptable at work.
 
 ## Sources
 

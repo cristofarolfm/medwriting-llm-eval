@@ -15,7 +15,10 @@
         "cross[- ]trial"
       ],
       "explains why cross-trial comparison is unreliable": [
-        "(different|differences in).{0,60}(population|design|eligibility|follow-up|analys|trial)"
+        "(different|differences in|differ).{0,60}(population|design|eligibility|follow-up|analys|trial|criteria)",
+        "eligibility",
+        "interim analysis",
+        "separate trials with"
       ],
       "RUBY dMMR PFS HR": [
         "0\\.29"

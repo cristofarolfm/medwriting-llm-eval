@@ -93,6 +93,13 @@ def cmd_report(_):
             h_txt = f"{human[(m, tid)]:g}/{maxp}" if (m, tid) in human else "–"
             cells.append(f"auto {a_txt} · human {h_txt}")
         lines.append(f"| {tid} | " + " | ".join(cells) + " |")
+    total_max = sum(sum(c["points"] for c in t["rubric"]) for t in tasks.values())
+    totals = []
+    for m in models:
+        a = [s for (mm, _), v in auto.items() if mm == m for s in v]
+        h = sum(v for (mm, _), v in human.items() if mm == m)
+        totals.append(f"**auto {sum(a) / len(a):.2f} · human {h:g}/{total_max}**" if a else "–")
+    lines.append("| **Total** | " + " | ".join(totals) + " |")
     RESULTS.mkdir(exist_ok=True)
     (RESULTS / "results.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))

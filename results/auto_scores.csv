@@ -51,7 +51,7 @@ claude,T06_fair_balance,numbers_in_sources,True,1.0,all numbers found in sources
 claude,T06_fair_balance,required_content,True,1.0,all present
 claude,T06_fair_balance,max_words,False,0.0,363 words (limit 220)
 claude,T07_no_cross_trial,numbers_in_sources,True,1.0,all numbers found in sources
-claude,T07_no_cross_trial,required_content,False,0.75,missing: explains why cross-trial comparison is unreliable
+claude,T07_no_cross_trial,required_content,True,1.0,all present
 claude,T07_no_cross_trial,forbidden_language,True,1.0,none
 claude,T07_no_cross_trial,max_words,True,1.0,252 words (limit 280)
 claude,T08_abstain,numbers_in_sources,True,1.0,all numbers found in sources

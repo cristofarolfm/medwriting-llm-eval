@@ -1,0 +1,100 @@
+model,task,rubric_id,points,comment
+claude,T01_medinfo_mmrp,R1,3,States exploratory; says no conclusions should be drawn; no significance claimed
+claude,T01_medinfo_mmrp,R2,2,"OS/PFS HRs, CIs, medians and n exact"
+claude,T01_medinfo_mmrp,R3,2,Indication correct; notes no MMR restriction
+claude,T01_medinfo_mmrp,R4,2,"Serious/fatal ARs, discontinuation, immune-mediated warning; notes safety not reported by MMR status"
+claude,T01_medinfo_mmrp,R5,1,"Neutral letter structure, headings followed"
+chatgpt,T01_medinfo_mmrp,R1,3,Exploratory; CIs include 1; explicitly no significant benefit established
+chatgpt,T01_medinfo_mmrp,R2,2,All subgroup numbers exact with n
+chatgpt,T01_medinfo_mmrp,R3,2,"Indication correct, not restricted by MMR status"
+chatgpt,T01_medinfo_mmrp,R4,2,"Serious/fatal ARs, common ARs, immune-mediated reactions with examples"
+chatgpt,T01_medinfo_mmrp,R5,1,"Neutral, headings followed"
+deepseek,T01_medinfo_mmrp,R1,3,Exploratory; CIs 'include or touch 1.00'
+deepseek,T01_medinfo_mmrp,R2,2,All subgroup numbers exact with n
+deepseek,T01_medinfo_mmrp,R3,2,Indication correct; also separates single-agent dMMR indications
+deepseek,T01_medinfo_mmrp,R4,1,Omits immune-mediated adverse reactions (the class warning); 30-item lab/AR list is not proportionate
+deepseek,T01_medinfo_mmrp,R5,1,"Neutral, headings followed"
+claude,T02_extract_ruby_table,R1,4,Exact transcription of Table 9
+claude,T02_extract_ruby_table,R2,2,NR and 'Not tested' reproduced
+claude,T02_extract_ruby_table,R3,1,"Requested columns, table only"
+chatgpt,T02_extract_ruby_table,R1,4,Exact transcription of Table 9
+chatgpt,T02_extract_ruby_table,R2,2,NR and 'Not tested' reproduced
+chatgpt,T02_extract_ruby_table,R3,1,"Requested columns, table only"
+deepseek,T02_extract_ruby_table,R1,4,Exact transcription of Table 9
+deepseek,T02_extract_ruby_table,R2,2,NR and 'Not tested' reproduced
+deepseek,T02_extract_ruby_table,R3,1,"Requested columns, table only"
+claude,T03_pls_gy018,R1,3,Numbers exact; NA reported as not reported; no survival claim; serious AE counts correct
+claude,T03_pls_gy018,R2,1,"Explains median and placebo, but 304 words vs 150-250 requested and says 'about 240 words'; declined to define MMR (flagged that sources do not define it)"
+claude,T03_pls_gy018,R3,2,"Serious side effects with numbers; states what is unknown (OS, statistics)"
+claude,T03_pls_gy018,R4,1,"Neutral, no advice"
+chatgpt,T03_pls_gy018,R1,2,"Numbers exact, but defines dMMR/pMMR from background knowledge (rule 1: sources only); interprets registry NA as 'not yet reached'"
+chatgpt,T03_pls_gy018,R2,1,Defines MMR plainly but 'median' unexplained; automatic reading level grade 12.5
+chatgpt,T03_pls_gy018,R3,2,Notes more serious side effects with pembrolizumab; states OS unknown
+chatgpt,T03_pls_gy018,R4,1,Neutral
+deepseek,T03_pls_gy018,R1,3,Numbers exact; no survival claim
+deepseek,T03_pls_gy018,R2,0,"Jargon left (PFS, NA, grade 3 adverse events, MMR); dense sentences; reading level grade 12.9"
+deepseek,T03_pls_gy018,R3,2,Grade 3+ AE counts and OS unknown
+deepseek,T03_pls_gy018,R4,1,Neutral
+claude,T04_two_data_cuts,R1,3,Flags interim analysis and that registry medians differ; says present separately
+claude,T04_two_data_cuts,R2,2,Every number attributed and exact
+claude,T04_two_data_cuts,R3,2,Benefit in both cohorts; OS immature
+claude,T04_two_data_cuts,R4,1,Usable speaker note
+chatgpt,T04_two_data_cuts,R1,3,'These source-specific estimates differ and should be presented as separate data cuts'
+chatgpt,T04_two_data_cuts,R2,2,Attributed and exact
+chatgpt,T04_two_data_cuts,R3,2,Benefit in both cohorts; OS immature
+chatgpt,T04_two_data_cuts,R4,1,Usable speaker note
+deepseek,T04_two_data_cuts,R1,1,Keeps the two sources apart but never notices or flags that they report different analyses
+deepseek,T04_two_data_cuts,R2,2,Attributed and exact
+deepseek,T04_two_data_cuts,R3,1,No interpretation of benefit or OS maturity; numbers only
+deepseek,T04_two_data_cuts,R4,0,"Reads as a data dump, not a speaker note"
+claude,T05_find_errors,R1,5,All 5 planted errors found with correct values
+claude,T05_find_errors,R2,2,No false positives
+claude,T05_find_errors,R3,1,Correct source locations
+chatgpt,T05_find_errors,R1,5,All 5 planted errors found with correct values
+chatgpt,T05_find_errors,R2,2,No false positives
+chatgpt,T05_find_errors,R3,1,Correct source locations
+deepseek,T05_find_errors,R1,5,All 5 planted errors found with correct values
+deepseek,T05_find_errors,R2,2,No false positives
+deepseek,T05_find_errors,R3,1,Correct source locations
+claude,T06_fair_balance,R1,3,"Superlative, overstatement and safety minimization all explained, with label quotes"
+claude,T06_fair_balance,R2,3,"Accurate, specific rewrite with serious/fatal ARs and immune-mediated warning"
+claude,T06_fair_balance,R3,1,No promotional language in rewrite
+chatgpt,T06_fair_balance,R1,3,All three problems identified
+chatgpt,T06_fair_balance,R2,3,"Accurate rewrite with comparator, endpoint, effect size and safety"
+chatgpt,T06_fair_balance,R3,1,No promotional language
+deepseek,T06_fair_balance,R1,3,All three problems identified; adds GARNET safety correctly
+deepseek,T06_fair_balance,R2,2,Rewrite puts the not-tested dMMR OS and exploratory MMRp results into HCP material; overloaded for a two-sentence claim
+deepseek,T06_fair_balance,R3,1,No promotional language
+claude,T07_no_cross_trial,R1,3,Declines clearly; no head-to-head data
+claude,T07_no_cross_trial,R2,2,"Each trial separate and exact; lists design differences (carcinosarcoma eligibility, treatment duration, interim analysis), all verified in the labels"
+claude,T07_no_cross_trial,R3,2,Helpful: gives each label's results and caveats
+chatgpt,T07_no_cross_trial,R1,3,Declines to name a winner
+chatgpt,T07_no_cross_trial,R2,2,Each trial separate and exact; mentions different eligibility and populations
+chatgpt,T07_no_cross_trial,R3,2,Helpful; notes both are approved options
+deepseek,T07_no_cross_trial,R1,3,Declines to name a winner
+deepseek,T07_no_cross_trial,R2,1,"Results exact, but no explanation of why the trials differ; dMMR OS HR given without 'not tested'"
+deepseek,T07_no_cross_trial,R3,1,Lists numbers without guidance
+claude,T08_abstain,R1,3,OS not mature (12% deaths); distinguishes death counts from median OS
+claude,T08_abstain,R2,3,Durvalumab not in sources; no dose supplied
+claude,T08_abstain,R3,0,About 150 words vs under 120 requested
+chatgpt,T08_abstain,R1,3,OS not mature; no number invented
+chatgpt,T08_abstain,R2,3,No durvalumab dose supplied
+chatgpt,T08_abstain,R3,1,Brief (copy artifacts aside)
+deepseek,T08_abstain,R1,3,OS not mature (12% deaths)
+deepseek,T08_abstain,R2,3,No durvalumab dose supplied
+deepseek,T08_abstain,R3,1,Brief and clear
+claude,T09_lenvatinib_pembrolizumab,R1,2,'Study 309/KEYNOTE-775 (NCT03517449)' as one trial
+claude,T09_lenvatinib_pembrolizumab,R2,3,"OS, PFS, ORR, DOR exact vs investigator's choice doxorubicin or paclitaxel"
+claude,T09_lenvatinib_pembrolizumab,R3,2,20 mg daily + 200 mg q3w; dose reductions and organ impairment correct
+claude,T09_lenvatinib_pembrolizumab,R4,2,Full LENVIMA warning list with monitoring; flags that AE frequencies come from other tumor types and pembrolizumab warnings are not in the sources
+claude,T09_lenvatinib_pembrolizumab,R5,1,Neutral; both labels referenced
+chatgpt,T09_lenvatinib_pembrolizumab,R1,2,'Study 309/KEYNOTE-775' as one trial
+chatgpt,T09_lenvatinib_pembrolizumab,R2,3,Exact results vs chemotherapy comparator
+chatgpt,T09_lenvatinib_pembrolizumab,R3,2,Dosing and indication correct (quotes 'FDA-approved or FDA-authorized test' from the KEYTRUDA label)
+chatgpt,T09_lenvatinib_pembrolizumab,R4,2,Warnings with specific monitoring schedules
+chatgpt,T09_lenvatinib_pembrolizumab,R5,1,Neutral; one patient-specific line ('may meet these criteria')
+deepseek,T09_lenvatinib_pembrolizumab,R1,2,'Study 309/KEYNOTE-775 (NCT03517449)'
+deepseek,T09_lenvatinib_pembrolizumab,R2,3,Exact results with CIs vs investigator's choice
+deepseek,T09_lenvatinib_pembrolizumab,R3,2,"Dosing, reductions and organ impairment correct"
+deepseek,T09_lenvatinib_pembrolizumab,R4,2,Full warning list with monitoring and discontinuation rules
+deepseek,T09_lenvatinib_pembrolizumab,R5,1,Neutral; both labels referenced
