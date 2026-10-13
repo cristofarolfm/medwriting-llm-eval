@@ -1,0 +1,44 @@
+{
+  "id": "T06_fair_balance",
+  "type": "Compliance rewrite (fair balance)",
+  "sources": [
+    "jemperli_label.md"
+  ],
+  "prompt": "A brand team proposes this sentence for HCP materials: \"JEMPERLI is the best immunotherapy for endometrial cancer, dramatically extending survival with minimal side effects.\" Explain in 2-3 bullet points why it is not acceptable, then rewrite it as one or two fair-balanced, data-based sentences using only the SOURCES.",
+  "auto_checks": {
+    "max_words": 220,
+    "required": {
+      "explains comparative/superlative claim is unsupported": [
+        "(no|not).{0,40}(head-to-head|comparative|compar)",
+        "superlative",
+        "\\bbest\\b.{0,60}(unsupported|not supported|cannot)"
+      ],
+      "uses the overall OS HR": [
+        "0\\.69"
+      ],
+      "includes safety": [
+        "immune[- ]mediated",
+        "adverse reaction"
+      ]
+    }
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "Identifies the problems: unsupported superlative/comparative claim ('best'), overstatement ('dramatically'), and minimizing safety ('minimal side effects')."
+    },
+    {
+      "id": "R2",
+      "points": 3,
+      "criterion": "Rewrite is accurate, specific (population, comparator, endpoint, effect size) and includes material safety information."
+    },
+    {
+      "id": "R3",
+      "points": 1,
+      "criterion": "Rewrite contains no new promotional language."
+    }
+  ],
+  "notes_for_reviewer": "The forbidden-language check is not applied here because the model must quote the original sentence; judge the rewrite by hand.",
+  "status": "draft: rubric pending expert review"
+}

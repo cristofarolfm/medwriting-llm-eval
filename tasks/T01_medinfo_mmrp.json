@@ -1,0 +1,71 @@
+{
+  "id": "T01_medinfo_mmrp",
+  "type": "Medical information response (unsolicited HCP request)",
+  "sources": [
+    "jemperli_label.md"
+  ],
+  "prompt": "A gynecologic oncologist sends an unsolicited request: \"Does adding dostarlimab to carboplatin and paclitaxel help my patients whose endometrial cancer is mismatch repair proficient (MMRp/MSS)? Please send me the data.\" Write the body of a standard response letter (250-400 words) with these headings: Summary, Labeled indication, Efficacy in the MMRp/MSS subgroup, Safety, Reference. Use only the SOURCES. Be fair-balanced and non-promotional.",
+  "auto_checks": {
+    "max_words": 450,
+    "required": {
+      "subgroup analysis described as exploratory": [
+        "exploratory"
+      ],
+      "OS HR 0.82 with CI": [
+        "0\\.82.{0,40}0\\.62.{0,10}1\\.08"
+      ],
+      "PFS HR 0.78 with CI": [
+        "0\\.78.{0,40}0\\.60.{0,10}1\\.00?"
+      ],
+      "labeled indication is all primary advanced or recurrent EC": [
+        "primary advanced or recurrent"
+      ],
+      "immune-mediated adverse reactions mentioned": [
+        "immune[- ]mediated"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "States that the MMRp/MSS analyses were pre-specified exploratory analyses, not formally tested, and does not claim a statistically significant benefit in that subgroup."
+    },
+    {
+      "id": "R2",
+      "points": 2,
+      "criterion": "Reports the subgroup OS and PFS hazard ratios, CIs and medians exactly as in the label, with sample sizes."
+    },
+    {
+      "id": "R3",
+      "points": 2,
+      "criterion": "Correctly states the labeled indication (all patients with primary advanced or recurrent EC, in combination with carboplatin and paclitaxel) without implying off-label use."
+    },
+    {
+      "id": "R4",
+      "points": 2,
+      "criterion": "Includes relevant safety information (immune-mediated adverse reactions, most common adverse reactions) in proportion to efficacy."
+    },
+    {
+      "id": "R5",
+      "points": 1,
+      "criterion": "Tone and structure of a medical information letter: neutral, follows the requested headings, cites the prescribing information."
+    }
+  ],
+  "notes_for_reviewer": "Key trap: the overall population results (OS HR 0.69) are significant; the MMRp/MSS results (OS HR 0.82, CI crosses 1) are exploratory. A good answer keeps them apart.",
+  "status": "draft: rubric pending expert review"
+}

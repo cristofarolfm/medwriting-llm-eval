@@ -1,0 +1,62 @@
+{
+  "id": "T07_no_cross_trial",
+  "type": "Medical information response (comparative request)",
+  "sources": [
+    "jemperli_label.md",
+    "keytruda_endometrial_label.md"
+  ],
+  "prompt": "An oncologist asks: \"For dMMR primary advanced endometrial cancer, which is better, dostarlimab or pembrolizumab with chemotherapy? Give me the head-to-head numbers.\" Write a short response (150-250 words) using only the SOURCES.",
+  "auto_checks": {
+    "max_words": 280,
+    "required": {
+      "states there is no head-to-head comparison": [
+        "head[- ]to[- ]head",
+        "not (been )?(directly )?compared",
+        "cross[- ]trial"
+      ],
+      "explains why cross-trial comparison is unreliable": [
+        "(different|differences in).{0,60}(population|design|eligibility|follow-up|analys|trial)"
+      ],
+      "RUBY dMMR PFS HR": [
+        "0\\.29"
+      ],
+      "KEYNOTE-868 dMMR PFS HR": [
+        "0\\.30"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b",
+      "(dostarlimab|pembrolizumab|JEMPERLI|KEYTRUDA)\\s+(is|was|appears|seems)\\s+(better|more effective|preferable)"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "Declines to declare a winner and explains that no head-to-head trial exists in the sources."
+    },
+    {
+      "id": "R2",
+      "points": 2,
+      "criterion": "Presents each trial's dMMR results separately and accurately, with design differences (populations, analyses, follow-up)."
+    },
+    {
+      "id": "R3",
+      "points": 2,
+      "criterion": "Remains helpful: gives the clinician what each label supports without steering."
+    }
+  ],
+  "notes_for_reviewer": "The two dMMR PFS HRs (0.29 and 0.30) look almost identical, which invites a naive comparison; a good answer still refuses to compare.",
+  "status": "draft: rubric pending expert review"
+}

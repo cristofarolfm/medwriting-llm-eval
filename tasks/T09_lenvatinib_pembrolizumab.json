@@ -1,0 +1,80 @@
+{
+  "id": "T09_lenvatinib_pembrolizumab",
+  "type": "Medical information response (MSL-style, two labels for one trial)",
+  "sources": [
+    "lenvima_endometrial_label.md",
+    "keytruda_endometrial_label.md"
+  ],
+  "prompt": "A gynecologic oncologist asks: \"My patient has advanced mismatch repair proficient endometrial cancer that progressed after carboplatin-paclitaxel. What does the evidence show for lenvatinib plus pembrolizumab, how is it dosed, and what safety issues should I plan for?\" Write a response of 250-400 words with the headings: Indication, Efficacy, Dosing, Key safety considerations, References. Use only the SOURCES.",
+  "auto_checks": {
+    "max_words": 450,
+    "required": {
+      "recognizes Study 309 and KEYNOTE-775 as the same trial": [
+        "(Study 309|KEYNOTE-775).{0,120}(same|also (known|called|referred)|i\\.e\\.|/)",
+        "Study 309\\s*/\\s*KEYNOTE-775|KEYNOTE-775\\s*/\\s*Study 309",
+        "NCT03517449"
+      ],
+      "OS HR 0.68 with CI": [
+        "0\\.68.{0,30}0\\.56.{0,10}0\\.84"
+      ],
+      "median OS 17.4 vs 12.0": [
+        "17\\.4.{0,80}12\\.0"
+      ],
+      "PFS 6.6 vs 3.8": [
+        "6\\.6.{0,80}3\\.8"
+      ],
+      "dose lenvatinib 20 mg daily + pembrolizumab 200 mg q3w": [
+        "20 mg.{0,80}200 mg|200 mg.{0,80}20 mg"
+      ],
+      "hypertension among safety issues": [
+        "hypertension"
+      ],
+      "indication requires progression after prior systemic therapy and pMMR/not MSI-H": [
+        "(pMMR|mismatch repair proficient|not MSI-H)"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 2,
+      "criterion": "Treats Study 309 (LENVIMA label) and KEYNOTE-775 (KEYTRUDA label) as one trial (NCT03517449) and does not double-count or present them as two studies."
+    },
+    {
+      "id": "R2",
+      "points": 3,
+      "criterion": "Efficacy in the pMMR/not MSI-H population reported exactly (OS, PFS, ORR, DOR) against the correct comparator (investigator's choice of doxorubicin or paclitaxel)."
+    },
+    {
+      "id": "R3",
+      "points": 2,
+      "criterion": "Correct dosing (lenvatinib 20 mg orally once daily plus pembrolizumab 200 mg IV every 3 weeks) and indication wording, including the requirement for an FDA-approved test and prior systemic therapy."
+    },
+    {
+      "id": "R4",
+      "points": 2,
+      "criterion": "Key safety considerations drawn from the LENVIMA warnings (e.g., hypertension, cardiac dysfunction, hepatotoxicity, renal impairment) and immune-mediated reactions, with monitoring implications, in proportion to efficacy."
+    },
+    {
+      "id": "R5",
+      "points": 1,
+      "criterion": "Neutral, non-promotional medical information tone; references both labels."
+    }
+  ],
+  "notes_for_reviewer": "Relevant to Eisai (LENVIMA) and Merck (KEYTRUDA) field medical work. The comparator was an active control, not placebo; check that the answer says so.",
+  "status": "draft: rubric pending expert review"
+}

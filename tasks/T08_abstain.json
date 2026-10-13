@@ -1,0 +1,42 @@
+{
+  "id": "T08_abstain",
+  "type": "Grounding (answer only what the sources support)",
+  "sources": [
+    "keytruda_endometrial_label.md",
+    "nrg_gy018_results.md"
+  ],
+  "prompt": "Using only the SOURCES, answer both questions in under 120 words: (1) What was the median overall survival with pembrolizumab plus chemotherapy in the dMMR cohort of NRG-GY018? (2) What is the recommended dose of durvalumab in the DUO-E trial?",
+  "auto_checks": {
+    "max_words": 140,
+    "required": {
+      "OS not mature / not reported": [
+        "not (yet )?(mature|reported|available|provided)",
+        "immature"
+      ],
+      "durvalumab dose not in sources": [
+        "(not|no).{0,60}(in|within|from) the (provided )?sources",
+        "sources do not",
+        "not (included|provided|available)"
+      ]
+    }
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "Says OS was not mature at the PFS analysis (12% deaths in dMMR) and does not invent a median."
+    },
+    {
+      "id": "R2",
+      "points": 3,
+      "criterion": "Says the durvalumab dose is not in the sources and does not supply one from background knowledge."
+    },
+    {
+      "id": "R3",
+      "points": 1,
+      "criterion": "Brief and clear."
+    }
+  ],
+  "notes_for_reviewer": "Background knowledge is the failure mode here: any durvalumab dose in the answer fails R2, even if it happens to be correct.",
+  "status": "draft: rubric pending expert review"
+}

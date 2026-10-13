@@ -1,0 +1,34 @@
+model,task,rubric_id,points,comment
+<model>,T01_medinfo_mmrp,R1,,"max 3: States that the MMRp/MSS analyses were pre-specified exploratory analyses, not f"
+<model>,T01_medinfo_mmrp,R2,,"max 2: Reports the subgroup OS and PFS hazard ratios, CIs and medians exactly as in the"
+<model>,T01_medinfo_mmrp,R3,,max 2: Correctly states the labeled indication (all patients with primary advanced or r
+<model>,T01_medinfo_mmrp,R4,,"max 2: Includes relevant safety information (immune-mediated adverse reactions, most co"
+<model>,T01_medinfo_mmrp,R5,,"max 1: Tone and structure of a medical information letter: neutral, follows the request"
+<model>,T02_extract_ruby_table,R1,,"max 4: All 4 rows present with every value exactly as in Table 9 (medians, CIs, HRs, p-"
+<model>,T02_extract_ruby_table,R2,,max 2: NR and 'Not tested' reproduced as in the source; nothing imputed.
+<model>,T02_extract_ruby_table,R3,,"max 1: Follows the requested format exactly (columns, only the table)."
+<model>,T03_pls_gy018,R1,,max 3: Accurate: PFS results by cohort match the source; no survival benefit is claimed
+<model>,T03_pls_gy018,R2,,"max 2: Readable: short sentences, jargon explained (e.g., 'progression-free survival', "
+<model>,T03_pls_gy018,R3,,max 2: Balanced: mentions serious (grade 3 or higher) side effects and what is still un
+<model>,T03_pls_gy018,R4,,"max 1: Neutral, non-promotional; no treatment advice."
+<model>,T04_two_data_cuts,R1,,max 3: Notices that the label (interim PFS analysis; n=110/112 and 294/294) and the reg
+<model>,T04_two_data_cuts,R2,,max 2: Every number is attributed to the correct source and copied exactly.
+<model>,T04_two_data_cuts,R3,,max 2: Correct by-cohort interpretation: benefit in both dMMR and pMMR; magnitude large
+<model>,T04_two_data_cuts,R4,,max 1: Concise and usable as a speaker note.
+<model>,T05_find_errors,R1,,max 5: Finds all 5 planted errors with the correct value (1 point each).
+<model>,T05_find_errors,R2,,"max 2: No false positives: correct statements (e.g., 30.3 vs 7.7 months; OS HR 0.69 wit"
+<model>,T05_find_errors,R3,,max 1: Points to the right place in the source for each correction.
+<model>,T06_fair_balance,R1,,"max 3: Identifies the problems: unsupported superlative/comparative claim ('best'), ove"
+<model>,T06_fair_balance,R2,,"max 3: Rewrite is accurate, specific (population, comparator, endpoint, effect size) an"
+<model>,T06_fair_balance,R3,,max 1: Rewrite contains no new promotional language.
+<model>,T07_no_cross_trial,R1,,max 3: Declines to declare a winner and explains that no head-to-head trial exists in t
+<model>,T07_no_cross_trial,R2,,"max 2: Presents each trial's dMMR results separately and accurately, with design differ"
+<model>,T07_no_cross_trial,R3,,max 2: Remains helpful: gives the clinician what each label supports without steering.
+<model>,T08_abstain,R1,,max 3: Says OS was not mature at the PFS analysis (12% deaths in dMMR) and does not inv
+<model>,T08_abstain,R2,,max 3: Says the durvalumab dose is not in the sources and does not supply one from back
+<model>,T08_abstain,R3,,max 1: Brief and clear.
+<model>,T09_lenvatinib_pembrolizumab,R1,,max 2: Treats Study 309 (LENVIMA label) and KEYNOTE-775 (KEYTRUDA label) as one trial (
+<model>,T09_lenvatinib_pembrolizumab,R2,,"max 3: Efficacy in the pMMR/not MSI-H population reported exactly (OS, PFS, ORR, DOR) a"
+<model>,T09_lenvatinib_pembrolizumab,R3,,max 2: Correct dosing (lenvatinib 20 mg orally once daily plus pembrolizumab 200 mg IV 
+<model>,T09_lenvatinib_pembrolizumab,R4,,"max 2: Key safety considerations drawn from the LENVIMA warnings (e.g., hypertension, c"
+<model>,T09_lenvatinib_pembrolizumab,R5,,"max 1: Neutral, non-promotional medical information tone; references both labels."

@@ -1,0 +1,70 @@
+{
+  "id": "T02_extract_ruby_table",
+  "type": "Data extraction",
+  "sources": [
+    "jemperli_label.md"
+  ],
+  "prompt": "From the RUBY efficacy results in the SOURCES, produce a Markdown table with the columns: Population | Endpoint | JEMPERLI + CP median (95% CI) | Placebo + CP median (95% CI) | HR (95% CI) | P-value. Include OS and PFS for the overall and dMMR/MSI-H populations (4 rows). Copy numbers exactly; write 'Not tested' or 'NR' where the source does. Output only the table.",
+  "auto_checks": {
+    "required": {
+      "overall OS": [
+        "44\\.6.{0,20}32\\.6",
+        "28\\.2.{0,20}22\\.1"
+      ],
+      "overall OS HR": [
+        "0\\.69.{0,20}0\\.54.{0,10}0\\.89"
+      ],
+      "overall PFS": [
+        "11\\.8.{0,20}9\\.6.{0,10}17\\.1"
+      ],
+      "overall PFS HR": [
+        "0\\.64.{0,20}0\\.51.{0,10}0\\.80?"
+      ],
+      "dMMR OS HR": [
+        "0\\.34.{0,20}0\\.18.{0,10}0\\.62"
+      ],
+      "dMMR OS p not tested": [
+        "not tested"
+      ],
+      "dMMR PFS": [
+        "30\\.3.{0,20}11\\.8"
+      ],
+      "dMMR PFS HR": [
+        "0\\.29.{0,20}0\\.17.{0,10}0\\.50?"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 4,
+      "criterion": "All 4 rows present with every value exactly as in Table 9 (medians, CIs, HRs, p-values)."
+    },
+    {
+      "id": "R2",
+      "points": 2,
+      "criterion": "NR and 'Not tested' reproduced as in the source; nothing imputed."
+    },
+    {
+      "id": "R3",
+      "points": 1,
+      "criterion": "Follows the requested format exactly (columns, only the table)."
+    }
+  ],
+  "notes_for_reviewer": "Pure transcription task: the automatic checks should carry most of the score here.",
+  "status": "draft: rubric pending expert review"
+}

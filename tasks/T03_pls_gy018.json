@@ -1,0 +1,64 @@
+{
+  "id": "T03_pls_gy018",
+  "type": "Plain-language summary",
+  "sources": [
+    "nrg_gy018_results.md"
+  ],
+  "prompt": "Write a plain-language summary of the NRG-GY018 results for patients and caregivers (150-250 words, reading level of grade 8 or lower). Explain what was tested, who took part, what was found for the two groups of patients (dMMR and pMMR), and what is not yet known. Use only the SOURCES and avoid jargon; explain any medical term you must use.",
+  "auto_checks": {
+    "max_words": 260,
+    "max_grade": 8,
+    "required": {
+      "both cohorts described": [
+        "dMMR.{0,400}pMMR|pMMR.{0,400}dMMR"
+      ],
+      "pMMR PFS medians": [
+        "11\\.7.{0,80}8\\.7|8\\.7.{0,80}11\\.7"
+      ],
+      "side effects mentioned": [
+        "side effect"
+      ],
+      "overall survival not yet reported": [
+        "(overall survival|how long (people|patients) live(d)?).{0,120}(not (yet )?(known|reported|available))|not (yet )?(known|reported).{0,80}(overall survival|live longer)"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "Accurate: PFS results by cohort match the source; no survival benefit is claimed."
+    },
+    {
+      "id": "R2",
+      "points": 2,
+      "criterion": "Readable: short sentences, jargon explained (e.g., 'progression-free survival', 'mismatch repair')."
+    },
+    {
+      "id": "R3",
+      "points": 2,
+      "criterion": "Balanced: mentions serious (grade 3 or higher) side effects and what is still unknown."
+    },
+    {
+      "id": "R4",
+      "points": 1,
+      "criterion": "Neutral, non-promotional; no treatment advice."
+    }
+  ],
+  "notes_for_reviewer": "The dMMR median PFS in the experimental arm is NA (not reached) in the registry; a good summary says it was not reached rather than inventing a number.",
+  "status": "draft: rubric pending expert review"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "T04_two_data_cuts",
+  "type": "Evidence summary across sources",
+  "sources": [
+    "keytruda_endometrial_label.md",
+    "nrg_gy018_results.md"
+  ],
+  "prompt": "Write one paragraph (120-200 words) for a slide speaker note summarizing progression-free survival with pembrolizumab plus carboplatin-paclitaxel in KEYNOTE-868/NRG-GY018, by MMR status. Use both SOURCES and attribute every number to its source.",
+  "auto_checks": {
+    "max_words": 230,
+    "required": {
+      "flags that the sources report different analyses or data cuts": [
+        "differ",
+        "interim",
+        "data cut",
+        "later (analysis|update)",
+        "discrepan"
+      ],
+      "label dMMR HR 0.30": [
+        "0\\.30"
+      ],
+      "label pMMR HR 0.60": [
+        "0\\.60"
+      ],
+      "registry pMMR medians 11.7 vs 8.7": [
+        "11\\.7"
+      ]
+    },
+    "forbidden": [
+      "\\bbreakthrough\\b",
+      "\\brevolutionar",
+      "\\bgame[- ]chang",
+      "\\bbest\\b",
+      "\\bsuperior\\b",
+      "\\bdramatic",
+      "\\bremarkabl",
+      "\\bunprecedented\\b",
+      "\\bminimal side effects\\b",
+      "\\bsafe and effective\\b",
+      "\\bmiracle\\b",
+      "\\bcure[sd]?\\b"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "R1",
+      "points": 3,
+      "criterion": "Notices that the label (interim PFS analysis; n=110/112 and 294/294) and the registry (n=113/112 and 295/293; different medians) report different analyses and does not mix numbers from the two."
+    },
+    {
+      "id": "R2",
+      "points": 2,
+      "criterion": "Every number is attributed to the correct source and copied exactly."
+    },
+    {
+      "id": "R3",
+      "points": 2,
+      "criterion": "Correct by-cohort interpretation: benefit in both dMMR and pMMR; magnitude larger in dMMR; OS immature."
+    },
+    {
+      "id": "R4",
+      "points": 1,
+      "criterion": "Concise and usable as a speaker note."
+    }
+  ],
+  "notes_for_reviewer": "This is the expert trap of the set. Label: placebo dMMR median 6.5, pMMR 11.1 vs 8.5 months. Registry: placebo dMMR 7.6, pMMR 11.7 vs 8.7 months.",
+  "status": "draft: rubric pending expert review"
+}

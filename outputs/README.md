@@ -1,0 +1,1 @@
+Save each model's answer as `outputs/<model>/<task_id>.md` (for example `outputs/claude/T01_medinfo_mmrp.md`), copied verbatim from the chat or API response. Add a first-line HTML comment with the model, interface and date.
