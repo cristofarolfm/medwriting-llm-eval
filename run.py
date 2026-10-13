@@ -54,7 +54,7 @@ def cmd_score(_):
             f = model_dir / f"{tid}.md"
             if not f.exists():
                 continue
-            out = f.read_text(encoding="utf-8")
+            out = C.strip_comments(f.read_text(encoding="utf-8"))
             src = "\n".join((SRC / s).read_text(encoding="utf-8") for s in t["sources"])
             for r in C.run_checks(out, t.get("auto_checks", {}), src, t["prompt"]):
                 rows.append({"model": model_dir.name, "task": tid, **r})

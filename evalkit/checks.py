@@ -7,6 +7,11 @@ with the human rubric in each task file.
 """
 import re
 
+def strip_comments(text):
+    """Remove HTML comments (the provenance header on each output file) before checking."""
+    return re.sub(r"<!--.*?-->", "", text, flags=re.S).strip()
+
+
 NUM = re.compile(r"(?<![\w.])[<>≤≥]?\d+(?:,\d{3})*(?:\.\d+)?%?")
 
 
@@ -43,8 +48,18 @@ def required_any(output, groups):
             "detail": "all present" if not missing else "missing: " + "; ".join(missing)}
 
 
+NEGATION = re.compile(r"\b(not|no|cannot|can't|neither|nor|without|avoid|unsupported|rather than)\b", re.I)
+
+
 def forbidden(output, patterns):
-    hits = sorted({m.group(0) for p in patterns for m in re.finditer(p, output, re.I)})
+    """Flag promotional words, unless the same clause negates them ("cannot conclude that one is superior")."""
+    hits = set()
+    for p in patterns:
+        for m in re.finditer(p, output, re.I):
+            clause = re.split(r"[.;:\n]", output[max(0, m.start() - 80):m.start()])[-1]
+            if not NEGATION.search(clause):
+                hits.add(m.group(0))
+    hits = sorted(hits)
     return {"check": "forbidden_language", "passed": not hits, "score": 1.0 if not hits else 0.0,
             "detail": "none" if not hits else "found: " + ", ".join(hits)}
 

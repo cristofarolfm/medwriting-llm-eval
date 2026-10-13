@@ -19,7 +19,8 @@
         "side effect"
       ],
       "overall survival not yet reported": [
-        "(overall survival|how long (people|patients) live(d)?).{0,120}(not (yet )?(known|reported|available))|not (yet )?(known|reported).{0,80}(overall survival|live longer)"
+        "(overall survival|how long (people|patients) live(d)?|live longer).{0,120}(not (yet )?(known|reported|available|posted)|unknown)",
+        "(not (yet )?(known|reported|posted)|do(es)? not (show|report)|unknown).{0,120}(overall survival|live longer|how long (people|patients) live)"
       ]
     },
     "forbidden": [

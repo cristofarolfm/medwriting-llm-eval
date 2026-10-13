@@ -1,0 +1,16 @@
+<!-- DeepSeek (chat.deepseek.com, DeepThink on, Search off), 13 Oct 2026. Pack attached as a file with the fixed message: 'The attached file contains your instructions, the SOURCES and the TASK. Complete the TASK.' Copied with the Copy button. -->
+
+## Indication
+LENVIMA (lenvatinib), in combination with pembrolizumab, is indicated for advanced endometrial carcinoma that is pMMR or not MSI-H, as determined by an FDA-approved test, in patients who have disease progression following prior systemic therapy in any setting and are not candidates for curative surgery or radiation (lenvima_endometrial_label.md, Indications and Usage 1.4). KEYTRUDA (pembrolizumab) has a corresponding combination indication (keytruda_endometrial_label.md, Indications and Usage 1.17).
+
+## Efficacy
+In Study 309/KEYNOTE-775 (NCT03517449), among 697 pMMR or not MSI-H patients, 346 received lenvatinib plus pembrolizumab and 351 received investigator’s choice doxorubicin or paclitaxel. Median OS was 17.4 months (95% CI 14.2, 19.9) vs 12.0 months (10.8, 13.3); HR 0.68 (0.56, 0.84); p=0.0001. Median PFS was 6.6 months (5.6, 7.4) vs 3.8 months (3.6, 5.0); HR 0.60 (0.50, 0.72); p<0.0001. ORR was 30% (26, 36) vs 15% (12, 19); complete response 5% vs 3%, partial response 25% vs 13%; p<0.0001. Median DOR was 9.2 months (1.6+, 23.7+) vs 5.7 months (0.0+, 24.2+) (lenvima_endometrial_label.md, Clinical Studies 14.4, Table 19; keytruda_endometrial_label.md, Clinical Studies 14.17, Table 110).
+
+## Dosing
+For endometrial carcinoma, lenvatinib 20 mg orally once daily with pembrolizumab 200 mg as an intravenous infusion over 30 minutes every 3 weeks, until unacceptable toxicity or disease progression; pembrolizumab maximum 24 months (lenvima_endometrial_label.md, Dosage and Administration 2.6; keytruda_endometrial_label.md, Clinical Studies 14.17). Lenvatinib endometrial carcinoma dose reductions: first 14 mg once daily, second 10 mg once daily, third 8 mg once daily. Severe renal impairment: 10 mg orally once daily; severe hepatic impairment (Child-Pugh C): 10 mg orally once daily (lenvima_endometrial_label.md, Dosage and Administration 2.7 Table 2, 2.8, 2.9).
+
+## Key safety considerations
+LENVIMA labeling lists warnings for hypertension, cardiac dysfunction, arterial thromboembolic events, hepatotoxicity, renal failure or impairment, proteinuria, diarrhea, fistula formation and gastrointestinal perforation, QT interval prolongation, hypocalcemia, reversible posterior leukoencephalopathy syndrome, hemorrhagic events, impaired thyroid stimulating hormone suppression/thyroid dysfunction, impaired wound healing, osteonecrosis of the jaw, and embryo-fetal toxicity. Monitor blood pressure, liver function, renal function, proteinuria, electrolytes, ECG as indicated, thyroid function, and calcium. Withhold, reduce, or permanently discontinue based on severity; permanently discontinue for any-grade gastrointestinal perforation, Grade 3 or 4 fistula, or arterial thromboembolic event. Advise effective contraception during treatment and for 30 days after last dose. Refer to pembrolizumab prescribing information for its dose modifications (lenvima_endometrial_label.md, Warnings and Precautions 5; Dosage and Administration 2.7).
+
+## References
+lenvima_endometrial_label.md; keytruda_endometrial_label.md.

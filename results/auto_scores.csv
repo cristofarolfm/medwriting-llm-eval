@@ -1,0 +1,94 @@
+model,task,check,passed,score,detail
+chatgpt,T01_medinfo_mmrp,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T01_medinfo_mmrp,required_content,True,1.0,all present
+chatgpt,T01_medinfo_mmrp,forbidden_language,True,1.0,none
+chatgpt,T01_medinfo_mmrp,max_words,True,1.0,349 words (limit 450)
+chatgpt,T02_extract_ruby_table,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T02_extract_ruby_table,required_content,True,1.0,all present
+chatgpt,T02_extract_ruby_table,forbidden_language,True,1.0,none
+chatgpt,T03_pls_gy018,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T03_pls_gy018,required_content,True,1.0,all present
+chatgpt,T03_pls_gy018,forbidden_language,True,1.0,none
+chatgpt,T03_pls_gy018,max_words,True,1.0,221 words (limit 260)
+chatgpt,T03_pls_gy018,reading_level,False,0.0,Flesch-Kincaid grade 12.5 (limit 8)
+chatgpt,T04_two_data_cuts,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T04_two_data_cuts,required_content,True,1.0,all present
+chatgpt,T04_two_data_cuts,forbidden_language,True,1.0,none
+chatgpt,T04_two_data_cuts,max_words,True,1.0,170 words (limit 230)
+chatgpt,T05_find_errors,planted_errors,True,1.0,5/5 flagged
+chatgpt,T06_fair_balance,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T06_fair_balance,required_content,True,1.0,all present
+chatgpt,T06_fair_balance,max_words,True,1.0,214 words (limit 220)
+chatgpt,T07_no_cross_trial,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T07_no_cross_trial,required_content,True,1.0,all present
+chatgpt,T07_no_cross_trial,forbidden_language,True,1.0,none
+chatgpt,T07_no_cross_trial,max_words,True,1.0,210 words (limit 280)
+chatgpt,T08_abstain,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T08_abstain,required_content,True,1.0,all present
+chatgpt,T08_abstain,max_words,True,1.0,105 words (limit 140)
+chatgpt,T09_lenvatinib_pembrolizumab,numbers_in_sources,True,1.0,all numbers found in sources
+chatgpt,T09_lenvatinib_pembrolizumab,required_content,True,1.0,all present
+chatgpt,T09_lenvatinib_pembrolizumab,forbidden_language,True,1.0,none
+chatgpt,T09_lenvatinib_pembrolizumab,max_words,True,1.0,415 words (limit 450)
+claude,T01_medinfo_mmrp,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T01_medinfo_mmrp,required_content,True,1.0,all present
+claude,T01_medinfo_mmrp,forbidden_language,True,1.0,none
+claude,T01_medinfo_mmrp,max_words,True,1.0,396 words (limit 450)
+claude,T02_extract_ruby_table,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T02_extract_ruby_table,required_content,True,1.0,all present
+claude,T02_extract_ruby_table,forbidden_language,True,1.0,none
+claude,T03_pls_gy018,numbers_in_sources,False,0.0,not in sources: 240
+claude,T03_pls_gy018,required_content,True,1.0,all present
+claude,T03_pls_gy018,forbidden_language,True,1.0,none
+claude,T03_pls_gy018,max_words,False,0.0,304 words (limit 260)
+claude,T03_pls_gy018,reading_level,True,1.0,Flesch-Kincaid grade 7.9 (limit 8)
+claude,T04_two_data_cuts,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T04_two_data_cuts,required_content,True,1.0,all present
+claude,T04_two_data_cuts,forbidden_language,True,1.0,none
+claude,T04_two_data_cuts,max_words,True,1.0,187 words (limit 230)
+claude,T05_find_errors,planted_errors,True,1.0,5/5 flagged
+claude,T06_fair_balance,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T06_fair_balance,required_content,True,1.0,all present
+claude,T06_fair_balance,max_words,False,0.0,363 words (limit 220)
+claude,T07_no_cross_trial,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T07_no_cross_trial,required_content,False,0.75,missing: explains why cross-trial comparison is unreliable
+claude,T07_no_cross_trial,forbidden_language,True,1.0,none
+claude,T07_no_cross_trial,max_words,True,1.0,252 words (limit 280)
+claude,T08_abstain,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T08_abstain,required_content,True,1.0,all present
+claude,T08_abstain,max_words,True,1.0,116 words (limit 140)
+claude,T09_lenvatinib_pembrolizumab,numbers_in_sources,True,1.0,all numbers found in sources
+claude,T09_lenvatinib_pembrolizumab,required_content,True,1.0,all present
+claude,T09_lenvatinib_pembrolizumab,forbidden_language,True,1.0,none
+claude,T09_lenvatinib_pembrolizumab,max_words,True,1.0,427 words (limit 450)
+deepseek,T01_medinfo_mmrp,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T01_medinfo_mmrp,required_content,False,0.8,missing: immune-mediated adverse reactions mentioned
+deepseek,T01_medinfo_mmrp,forbidden_language,True,1.0,none
+deepseek,T01_medinfo_mmrp,max_words,True,1.0,397 words (limit 450)
+deepseek,T02_extract_ruby_table,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T02_extract_ruby_table,required_content,True,1.0,all present
+deepseek,T02_extract_ruby_table,forbidden_language,True,1.0,none
+deepseek,T03_pls_gy018,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T03_pls_gy018,required_content,True,1.0,all present
+deepseek,T03_pls_gy018,forbidden_language,True,1.0,none
+deepseek,T03_pls_gy018,max_words,True,1.0,217 words (limit 260)
+deepseek,T03_pls_gy018,reading_level,False,0.0,Flesch-Kincaid grade 12.9 (limit 8)
+deepseek,T04_two_data_cuts,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T04_two_data_cuts,required_content,False,0.75,missing: flags that the sources report different analyses or data cuts
+deepseek,T04_two_data_cuts,forbidden_language,True,1.0,none
+deepseek,T04_two_data_cuts,max_words,True,1.0,155 words (limit 230)
+deepseek,T05_find_errors,planted_errors,True,1.0,5/5 flagged
+deepseek,T06_fair_balance,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T06_fair_balance,required_content,True,1.0,all present
+deepseek,T06_fair_balance,max_words,False,0.0,334 words (limit 220)
+deepseek,T07_no_cross_trial,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T07_no_cross_trial,required_content,False,0.75,missing: explains why cross-trial comparison is unreliable
+deepseek,T07_no_cross_trial,forbidden_language,True,1.0,none
+deepseek,T07_no_cross_trial,max_words,True,1.0,166 words (limit 280)
+deepseek,T08_abstain,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T08_abstain,required_content,True,1.0,all present
+deepseek,T08_abstain,max_words,True,1.0,64 words (limit 140)
+deepseek,T09_lenvatinib_pembrolizumab,numbers_in_sources,True,1.0,all numbers found in sources
+deepseek,T09_lenvatinib_pembrolizumab,required_content,True,1.0,all present
+deepseek,T09_lenvatinib_pembrolizumab,forbidden_language,True,1.0,none
+deepseek,T09_lenvatinib_pembrolizumab,max_words,True,1.0,408 words (limit 450)

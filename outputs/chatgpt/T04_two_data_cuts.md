@@ -1,0 +1,7 @@
+<!-- ChatGPT (chatgpt.com, temporary unpersonalized chat, 'Medium'), 13 Oct 2026. Pack attached as a file with the fixed message: 'The attached file contains your instructions, the SOURCES and the TASK. Complete the TASK.' Copied with the Copy button. -->
+
+In KEYNOTE-868/NRG-GY018, pembrolizumab plus carboplatin-paclitaxel, followed by pembrolizumab maintenance, demonstrated statistically significant improvements in progression-free survival (PFS) compared with placebo plus carboplatin-paclitaxel in both mismatch repair–deficient (dMMR) and mismatch repair–proficient (pMMR) endometrial carcinoma populations. According to the KEYTRUDA FDA prescribing information (Table 109), in the dMMR cohort, median PFS was not reached (95% CI: 30.7, NR) with pembrolizumab versus 6.5 months (95% CI: 6.4, 8.7) with placebo, with a hazard ratio of 0.30 (95% CI: 0.19, 0.48; p<0.0001). In the pMMR cohort, median PFS was 11.1 versus 8.5 months, respectively, with a hazard ratio of 0.60 (95% CI: 0.46, 0.78; p<0.0001), also per the FDA label. Separately, ClinicalTrials.gov posted results for NCT03914612 report median PFS of NA versus 7.6 months in dMMR and 11.7 versus 8.7 months in pMMR, respectively. These source-specific estimates differ and should be presented as separate data cuts rather than reconciled. At the FDA-label PFS analysis, overall survival data were not mature.&#x20;
+
+T04_two_data_cuts.md
+
+T04_two_data_cuts.md

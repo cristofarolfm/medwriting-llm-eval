@@ -65,3 +65,14 @@ def test_task_files_valid():
             for pat in pats:
                 re.compile(pat)
         assert sum(c["points"] for c in t["rubric"]) > 0
+
+
+def test_provenance_header_ignored():
+    out = C.strip_comments("<!-- Model X 5.5, 13 Oct 2026 -->\n\nMedian OS 44.6 months.")
+    assert C.numbers_in_sources(out, SRC)["passed"] and C.word_count(out) == 4
+
+
+def test_forbidden_ignores_negated_use():
+    pats = [r"\bsuperior\b"]
+    assert C.forbidden("It is not possible to conclude that one regimen is superior.", pats)["passed"]
+    assert not C.forbidden("JEMPERLI is superior to pembrolizumab.", pats)["passed"]

@@ -1,0 +1,9 @@
+<!-- ChatGPT (chatgpt.com, temporary unpersonalized chat, 'Medium'), 13 Oct 2026. Pack attached as a file with the fixed message: 'The attached file contains your instructions, the SOURCES and the TASK. Complete the TASK.' Copied with the Copy button. -->
+
+For patients with dMMR primary advanced endometrial cancer, both dostarlimab (JEMPERLI) and pembrolizumab (KEYTRUDA), in combination with carboplatin and paclitaxel followed by immunotherapy maintenance, are FDA-approved treatment options. However, there are no head-to-head data in the provided sources, so it is not possible to conclude that one regimen is superior.
+
+In the RUBY trial, dostarlimab plus carboplatin and paclitaxel demonstrated improved progression-free survival (PFS) versus chemotherapy alone in the dMMR/MSI-H population. Median PFS was 30.3 months (95% CI: 11.8, NR) versus 7.7 months (95% CI: 5.6, 9.7), with a hazard ratio (HR) of 0.29 (95% CI: 0.17, 0.50; p<0.0001). Source: JEMPERLI prescribing information, Table 9.
+
+In KEYNOTE-868/NRG-GY018, pembrolizumab plus carboplatin and paclitaxel also significantly improved PFS versus chemotherapy alone in the dMMR population. Median PFS was not reached (95% CI: 30.7, NR) versus 6.5 months (95% CI: 6.4, 8.7), with an HR of 0.30 (95% CI: 0.19, 0.48; p<0.0001). Source: KEYTRUDA prescribing information, Table 109.
+
+Clinical interpretation: Both regimens demonstrated statistically significant PFS benefits against their respective chemotherapy controls. These results come from separate trials with different eligibility criteria and study populations. Neither trial directly compared dostarlimab with pembrolizumab; therefore, cross-trial numerical comparisons cannot establish comparative efficacy or superiority, including specifically in primary advanced dMMR disease.
